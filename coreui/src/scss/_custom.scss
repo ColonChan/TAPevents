@@ -1,0 +1,10 @@
+.app-footer {
+  color: $gray-400;
+  font-size: 12px;
+  .ml-auto {
+    &:after {
+      content: '(1126.1)';
+      color: $gray-300;;
+    }
+  }
+}
