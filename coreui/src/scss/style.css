@@ -10015,6 +10015,109 @@ body {
 .app-header .navbar-nav .dropdown-menu-right {
   right: auto; }
 
+/* Global Class */
+body {
+  color: #7e7e7e;
+  background-color: #edeeef; }
+
+.wraning-msg {
+  color: #ff9800; }
+
+.btn {
+  min-width: 108px;
+  border-radius: 36px !important; }
+
+.btn-brand {
+  color: #fff;
+  background-color: #d21b1d !important;
+  border-color: #d21b1d !important; }
+
+.btn-flat {
+  background-color: transparent !important;
+  border: 2px solid rgba(255, 255, 255, 0.5); }
+
+.btn-link {
+  color: #1565C0; }
+
+/* Login Page Classes */
+.frontbk {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../assets/img/mainbk.jpg") no-repeat center;
+  background-size: cover; }
+
+.card-group > .card.sibox {
+  flex: unset;
+  flex-grow: 1;
+  align-items: center;
+  border-radius: 0;
+  border-color: #dbdbdb; }
+  @media (min-width: 992px) {
+    .card-group > .card.sibox > .card-body {
+      max-width: 340px;
+      width: 100%; } }
+
+.card-group > .card.sibar {
+  width: 240px;
+  flex: unset;
+  border-radius: 0;
+  border-color: #dbdbdb;
+  background: #7e7e7e url("../assets/img/signinbk.jpg") no-repeat center;
+  background-size: cover; }
+  .card-group > .card.sibar > .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .card-group > .card.sibar > .card-body span {
+      display: block; }
+      .card-group > .card.sibar > .card-body span:nth-child(1) {
+        font-size: 0.825rem; }
+      .card-group > .card.sibar > .card-body span:nth-child(2) {
+        width: 115px;
+        height: 20px;
+        margin: 5px auto; }
+      .card-group > .card.sibar > .card-body span:nth-child(3) {
+        font-weight: 500;
+        font-size: 0.825rem; }
+  .card-group > .card.sibar .svg-logowhite {
+    width: 100%;
+    height: 100%; }
+  .card-group > .card.sibar .btn-flat {
+    text-transform: uppercase; }
+  .card-group > .card.sibar .inner-down p {
+    width: 160px;
+    margin: auto; }
+
+.login-form h1 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #505050; }
+
+.login-form .input-group-text {
+  border: 1px solid #dbdbdb;
+  border-radius: 35px;
+  padding-left: 0.8rem;
+  padding-right: 0.7rem; }
+
+.login-form .form-control {
+  border: 1px solid #dbdbdb;
+  border-radius: 35px; }
+
+.login-form .mb-6 {
+  margin-bottom: 2.5rem !important; }
+
+.login-form .wraning-msg {
+  padding: 0 0 0.5rem;
+  line-height: 1.75rem;
+  height: 2.25rem; }
+
+.login-form .btn-brand {
+  text-transform: uppercase; }
+
 .app-footer {
   color: #acb4bc;
   font-size: 12px; }

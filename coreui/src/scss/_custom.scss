@@ -1,3 +1,91 @@
+/* Global Class */
+body { color: $brand-text-color; background-color: #edeeef; }
+.wraning-msg { color: $brand-warning-color; }
+.btn {
+  min-width: 108px;
+  border-radius: 36px !important;
+}
+.btn-brand {
+  color: #fff;
+  background-color: $brand-main-color !important;
+  border-color: $brand-main-color !important;
+}
+.btn-flat { 
+  background-color: transparent !important;
+  border: 2px solid rgba(#fff, 0.5);
+  
+}
+.btn-link { color: #1565C0; }
+
+/* Login Page Classes */
+.frontbk {
+  position: absolute; top: 50%; left: 0; right: 0; bottom: 0;
+  background: url('../assets/img/mainbk.jpg') no-repeat center;
+  background-size: cover; 
+}
+.card-group > .card {
+  &.sibox {
+    flex: unset; flex-grow: 1; align-items: center; 
+    border-radius: 0; border-color: $brand-litegray-text; 
+    > .card-body {
+      @media (min-width: 992px) { 
+        max-width: 340px; width: 100%;
+      }
+    }
+  }
+  &.sibar { 
+    width: 240px; flex: unset; border-radius: 0; border-color: $brand-litegray-text;
+    background: #7e7e7e url('../assets/img/signinbk.jpg') no-repeat center; 
+    background-size: cover; 
+    > .card-body {
+      display: flex; flex-direction: column; justify-content: space-between;
+      span {
+        display: block;
+        &:nth-child(1) { font-size: 0.825rem; }
+        &:nth-child(2) { width:115px; height: 20px; margin: 5px auto; }
+        &:nth-child(3) { font-weight: 500; font-size: 0.825rem; }
+      }
+    }
+    .svg-logowhite { width: 100% ; height: 100%; }
+    .btn-flat { text-transform: uppercase; }
+    .inner-down p { width: 160px; margin: auto; }
+  }
+}
+.login-form {
+  h1 { font-size: 18px; font-weight: 600; margin-bottom: 5px; color: $brand-dark-text; }
+  .input-group-text {  border: 1px solid $brand-litegray-text; border-radius: 35px; padding-left: 0.8rem;
+    padding-right: 0.7rem;  }
+  .form-control { border: 1px solid $brand-litegray-text; border-radius: 35px; }
+  .mb-6 { margin-bottom: 2.5rem!important; }
+  .wraning-msg {
+    padding: 0 0 0.5rem; line-height: 1.75rem; height: 2.25rem;
+  }
+  .btn-brand {
+    text-transform: uppercase;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .app-footer {
   color: $gray-400;
   font-size: 12px;
