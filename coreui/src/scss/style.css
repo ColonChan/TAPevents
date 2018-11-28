@@ -7782,7 +7782,7 @@ canvas {
 .app-header {
   position: relative;
   flex-direction: row;
-  height: 55px;
+  height: 65px;
   padding: 0;
   margin: 0;
   background-color: #fff;
@@ -7792,7 +7792,7 @@ canvas {
     align-items: center;
     justify-content: center;
     width: 155px;
-    height: 55px;
+    height: 65px;
     padding: 0;
     margin-right: 0;
     background-color: transparent; }
@@ -7828,7 +7828,7 @@ canvas {
         margin-top: -16px;
         margin-left: 0; }
       .app-header .nav-item .nav-link > .img-avatar, .app-header .nav-item .avatar.nav-link > img {
-        height: 35px;
+        height: 45px;
         margin: 0 10px; }
   .app-header .dropdown-menu {
     padding-bottom: 0;
@@ -8060,7 +8060,7 @@ canvas {
     padding: 0 1rem;
     font-size: 24px;
     font-weight: 800;
-    line-height: 55px;
+    line-height: 65px;
     color: #fff;
     background: 0;
     border: 0;
@@ -8807,7 +8807,7 @@ app-root {
   min-height: 100vh; }
 
 .app-header {
-  flex: 0 0 55px; }
+  flex: 0 0 65px; }
 
 .app-footer {
   flex: 0 0 50px; }
@@ -8846,14 +8846,14 @@ html[dir="rtl"] .aside-menu {
     z-index: 1020;
     width: 100%; }
   .header-fixed .app-body {
-    margin-top: 55px; }
+    margin-top: 65px; }
   .sidebar-fixed .sidebar {
     position: fixed;
     z-index: 1019;
     width: 200px;
     height: 100vh; }
   .sidebar-fixed .app-header + .app-body .sidebar {
-    height: calc(100vh - 55px); }
+    height: calc(100vh - 65px); }
   .sidebar-compact .sidebar {
     flex: 0 0 150px; }
   .sidebar-compact.sidebar-fixed .sidebar {
@@ -8869,7 +8869,7 @@ html[dir="rtl"] .aside-menu {
     z-index: 1019;
     height: 100%; }
   .sidebar-off-canvas .app-header + .app-body .sidebar {
-    height: calc(100vh - 55px); }
+    height: calc(100vh - 65px); }
   html:not([dir="rtl"]) .sidebar-compact .sidebar {
     margin-left: -150px; }
   html:not([dir="rtl"]) .sidebar-minimized .sidebar {
@@ -8882,15 +8882,15 @@ html[dir="rtl"] .aside-menu {
     position: fixed;
     height: 100%; }
     .aside-menu-fixed .aside-menu .tab-content {
-      height: calc(100vh - 2.375rem - 55px); }
+      height: calc(100vh - 2.375rem - 65px); }
   .aside-menu-fixed .app-header + .app-body .aside-menu {
-    height: calc(100vh - 55px); }
+    height: calc(100vh - 65px); }
   .aside-menu-off-canvas .aside-menu {
     position: fixed;
     z-index: 1019;
     height: 100%; }
   .aside-menu-off-canvas .app-header + .app-body .aside-menu {
-    height: calc(100vh - 55px); }
+    height: calc(100vh - 65px); }
   html:not([dir="rtl"]) .aside-menu-fixed .aside-menu,
   html:not([dir="rtl"]) .aside-menu-off-canvas .aside-menu {
     right: 0; }
@@ -8903,7 +8903,7 @@ html[dir="rtl"] .aside-menu {
 
 .breadcrumb-fixed .breadcrumb {
   position: fixed;
-  top: 55px;
+  top: 65px;
   right: 0;
   left: 0;
   z-index: 1017; }
@@ -9317,12 +9317,12 @@ html[dir="rtl"] .aside-menu-show .aside-menu {
       left: 50%;
       margin-left: -77.5px; }
   .app-body {
-    margin-top: 55px; }
+    margin-top: 65px; }
   .sidebar {
     position: fixed;
     z-index: 1019;
     width: 200px;
-    height: calc(100vh - 55px); }
+    height: calc(100vh - 65px); }
   .sidebar-minimizer {
     display: none; }
   .aside-menu {
@@ -10035,6 +10035,11 @@ body {
 .btn-flat {
   background-color: transparent !important;
   border: 2px solid rgba(255, 255, 255, 0.5); }
+  .btn-flat:hover {
+    border: 2px solid rgba(255, 255, 255, 0.8); }
+  .btn-flat:active, .btn-flat:not(:disabled):not(.disabled):active {
+    border: 2px solid rgba(255, 255, 255, 0.95);
+    border-color: rgba(255, 255, 255, 0.95); }
 
 .btn-link {
   color: #1565C0; }
