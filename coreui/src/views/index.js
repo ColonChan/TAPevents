@@ -1,16 +1,10 @@
 import Dashboard from './Dashboard';
-import { 
-  Login, 
-  Page404, 
-  Page500, 
-  // Register 
+import EventList from './EventList';
+import { Login, Page404, Page500,
+  // Register
 } from './Pages';
 
-export { 
-  Dashboard, 
-  Page404,
-  Page500,
+export { EventList, Dashboard, Page404, Page500,
   // Register,
-  Login, 
-};
+  Login, };
 
