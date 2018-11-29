@@ -10,10 +10,17 @@ body { color: $brand-text-color; background-color: #edeeef; }
   background-color: $brand-main-color !important;
   border-color: $brand-main-color !important;
 }
-.btn-flat {
+.btn-flat { 
   background-color: transparent !important;
   border: 2px solid rgba(#fff, 0.5);
-
+  &:hover {
+    border: 2px solid rgba(#fff, 0.8);
+  }
+  &:active, &:not(:disabled):not(.disabled):active {
+    border: 2px solid rgba(#fff, 0.95);
+    border-color: rgba(#fff, 0.95);
+  }
+  
 }
 .btn-link { color: #1565C0; }
 
@@ -21,22 +28,24 @@ body { color: $brand-text-color; background-color: #edeeef; }
 .frontbk {
   position: absolute; top: 50%; left: 0; right: 0; bottom: 0;
   background: url('../assets/img/mainbk.jpg') no-repeat center;
-  background-size: cover;
+  background-size: cover; 
 }
+
 .card-group > .card {
   &.sibox {
-    flex: unset; flex-grow: 1; align-items: center;
-    border-radius: 0; border-color: $brand-litegray-text;
+    flex: unset; flex-grow: 1; align-items: center; 
+    border-radius: 0; border-color: $brand-litegray-text; 
     > .card-body {
-      @media (min-width: 992px) {
+      @media (min-width: 992px) { 
         max-width: 340px; width: 100%;
       }
     }
   }
-  &.sibar {
+
+  &.sibar { 
     width: 240px; flex: unset; border-radius: 0; border-color: $brand-litegray-text;
-    background: #7e7e7e url('../assets/img/signinbk.jpg') no-repeat center;
-    background-size: cover;
+    background: #7e7e7e url('../assets/img/signinbk.jpg') no-repeat center; 
+    background-size: cover; 
     > .card-body {
       display: flex; flex-direction: column; justify-content: space-between;
       span {
@@ -51,6 +60,7 @@ body { color: $brand-text-color; background-color: #edeeef; }
     .inner-down p { width: 160px; margin: auto; }
   }
 }
+
 .login-form {
   h1 { font-size: 18px; font-weight: 600; margin-bottom: 5px; color: $brand-dark-text; }
   .input-group-text {  border: 1px solid $brand-litegray-text; border-radius: 35px; padding-left: 0.8rem;

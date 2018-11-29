@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { DropdownMenu, DropdownToggle, Nav } from 'reactstrap';
+import { DropdownMenu, DropdownToggle, Nav, NavItem, NavLink } from 'reactstrap';
 import PropTypes from 'prop-types';
 
 import { 
@@ -9,7 +9,7 @@ import {
   AppSidebarToggler 
 } from '@coreui/react';
 
-import logo from '../../assets/img/brand/logo.svg'
+import logo from '../../assets/img/brand/applogo.svg'
 import sygnet from '../../assets/img/brand/sygnet.svg'
 import avatar from '../../assets/img/avatars/6.jpg'
 
@@ -29,11 +29,14 @@ class DefaultHeader extends Component {
       <React.Fragment>
         <AppSidebarToggler className="d-lg-none" display="md" mobile />
         <AppNavbarBrand
-          full={{ src: logo, width: 89, height: 25, alt: 'CoreUI Logo' }}
+          full={{ src: logo, width: 113, height: 36, alt: 'CoreUI Logo' }}
           minimized={{ src: sygnet, width: 30, height: 30, alt: 'CoreUI Logo' }}
         />
         {/* <AppSidebarToggler className="d-md-down-none" display="lg" /> */}
         <Nav className="ml-auto" navbar>
+          <NavItem className="d-md-down-none">
+            <NavLink href="#"><i className="icon-location-pin"></i></NavLink>
+          </NavItem>
           <AppHeaderDropdown>
             <DropdownToggle nav>
               <img src={avatar} className="img-avatar" alt="admin@bootstrapmaster.com" />
