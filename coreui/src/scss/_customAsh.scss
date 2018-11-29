@@ -18,7 +18,9 @@
         .date { font-size: 14px; color: $brand-text-color; padding-bottom:8px;
           .talker { color:$brand-dark-text; }
         }
-        .desp {  background:#f4f4f4; height: 60px; color:$brand-gray-text; padding:8px 12px; border-radius:3px; text-overflow: ellipsis; overflow: hidden; }
+        .desp {  background:#f4f4f4; max-height:55px; overflow:hidden; color:$brand-gray-text; padding:5px 12px; border-radius:3px; text-overflow: ellipsis; overflow: hidden; 
+          p { line-height: 22px;}
+        }
       }
     }
     .itemAction { display: inline-flex; align-items: center; justify-content: center; flex-basis:320px;

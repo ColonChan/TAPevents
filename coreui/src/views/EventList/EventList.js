@@ -59,7 +59,7 @@ class EventList extends Component {
             <div className="content">
               <div className="title online">Why are We Here?</div>
               <div className="date">04, Dec, 2018 7:30pm - 9:55pm <span>- <b className="talker">Jamies Spthill</b></span></div>
-              <div className="desp">A strong and clear event description excites punters: tell them what will happen at the event, who will be speaking, and what they might get out of attending. Your event may be brilliant, but no one else will ...</div>
+              <div className="desp"><p>A strong and clear event description excites punters: tell them what will happen at the event, who will be speaking, and what they might get out of attending. Your event may be brilliant, but no one else will ...</p></div>
             </div>
           </div>
           <div className="itemAction">
