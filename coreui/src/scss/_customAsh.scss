@@ -1,3 +1,6 @@
+.btnsubmit {  background:$brand-info-color; }
+.btncancel {  background:$brand-litegray-text; color:$brand-dark-text }
+
 .flexbox { display: flex; align-items: center; justify-content: center;
   &.header {  font-size:16px; color:$brand-dark-text; font-weight: 500; padding:8px 14px !important; }
   &.eventlist { padding:14px; justify-content: space-between; border-bottom:1px solid #ddd;
@@ -18,7 +21,7 @@
         .date { font-size: 14px; color: $brand-text-color; padding-bottom:8px;
           .talker { color:$brand-dark-text; }
         }
-        .desp {  background:#f4f4f4; max-height:55px; overflow:hidden; color:$brand-gray-text; padding:5px 12px; border-radius:3px; text-overflow: ellipsis; overflow: hidden; 
+        .desp {  background:#f4f4f4; max-height:55px; overflow:hidden; color:$brand-gray-text; padding:5px 12px; border-radius:3px; text-overflow: ellipsis; overflow: hidden;
           p { line-height: 22px;}
         }
       }
@@ -51,7 +54,7 @@
 .card {   border:none; border-radius:0;
   &-header { border-radius:0 !important; background:#fff; display: flex; align-items: center; justify-content: space-between;
     .header { font-size: 18px; color:$brand-main-color; font-weight:500;   }
-    .rightbox { display:inline-flex;
+    .rightbox { display:inline-flex; align-items: center;
       .btncreate {  background:$brand-main-color; border:0; color:#fff; padding-left:30px; padding-right:30px; margin-left:10px; }
     }
     .searchbtn {  position: relative;
@@ -67,3 +70,7 @@
     .page-link {  background:$brand-main-color; color:#fff;     }
   }
 }
+.formOnline {     border: 1px solid #dedcdc; border-radius: 3px; text-align: center; padding: 15px 0;
+  .form-check-label { font-weight:500; }
+}
+.subformarea {  padding:15px 20px; background:whitesmoke; border-radius: 3px; }

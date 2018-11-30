@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'reactstrap';
 import {
   InputGroup, InputGroupAddon, Button, CardHeader, Pagination, PaginationItem, PaginationLink, Card, CardBody, Dropdown, DropdownItem, DropdownMenu, DropdownToggle, Input, Form,
   FormGroup } from 'reactstrap';
@@ -40,7 +41,7 @@ class EventList extends Component {
               </div>
 
               </Form>
-            <Button block className="btncreate">CREATE EVENT</Button>
+              <NavLink href="/#/createevent"><Button block className="btncreate">CREATE EVENT</Button></NavLink>
             </div>
           </CardHeader>
           <CardBody>
@@ -99,7 +100,7 @@ class EventList extends Component {
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>Update</DropdownItem>
-                      <DropdownItem>Delete <SVGIconTrash /></DropdownItem>
+                      <DropdownItem className="btndelete">Delete <SVGIconTrash /></DropdownItem>
                 </DropdownMenu>
               </Dropdown>
           </div>
@@ -125,7 +126,7 @@ class EventList extends Component {
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>Update</DropdownItem>
-                      <DropdownItem>Delete <SVGIconTrash /></DropdownItem>
+                      <DropdownItem className="btndelete">Delete <SVGIconTrash /></DropdownItem>
                 </DropdownMenu>
               </Dropdown>
             </div>

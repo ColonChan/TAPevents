@@ -14,5 +14,15 @@ export default {
       url: '/eventlist',
       icon: 'icon-speedometer',
     },
+    {
+      name: 'CreateEvent',
+      url: '/createevent',
+      icon: 'icon-speedometer',
+    },
+    {
+      name: 'EditEvent',
+      url: '/editevent',
+      icon: 'icon-speedometer',
+    },
   ]
 };

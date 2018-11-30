@@ -10130,5 +10130,174 @@ body {
     content: '(1126.1)';
     color: #c8ced3; }
 
+.btnsubmit {
+  background: #4FC3F7; }
+
+.btncancel {
+  background: #dbdbdb;
+  color: #505050; }
+
+.flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .flexbox.header {
+    font-size: 16px;
+    color: #505050;
+    font-weight: 500;
+    padding: 8px 14px !important; }
+  .flexbox.eventlist {
+    padding: 14px;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd; }
+    .flexbox.eventlist .itemClient {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center; }
+      .flexbox.eventlist .itemClient .logo {
+        margin-right: 38px; }
+        .flexbox.eventlist .itemClient .logo img {
+          height: 58px;
+          width: auto;
+          min-height: 58px;
+          max-width: 100px; }
+      .flexbox.eventlist .itemClient .content {
+        padding-left: 21px; }
+        .flexbox.eventlist .itemClient .content .title {
+          color: #d21b1d;
+          font-weight: bold;
+          font-size: 16px;
+          position: relative; }
+          .flexbox.eventlist .itemClient .content .title::before {
+            content: "";
+            position: absolute;
+            top: 9px;
+            left: -17px;
+            border-radius: 100%;
+            height: 8px;
+            width: 8px;
+            background: transparent; }
+          .flexbox.eventlist .itemClient .content .title.online::before {
+            background: #4caf50; }
+          .flexbox.eventlist .itemClient .content .title.offline::before {
+            background: #a9a9a9; }
+        .flexbox.eventlist .itemClient .content .date {
+          font-size: 14px;
+          color: #7e7e7e;
+          padding-bottom: 8px; }
+          .flexbox.eventlist .itemClient .content .date .talker {
+            color: #505050; }
+        .flexbox.eventlist .itemClient .content .desp {
+          background: #f4f4f4;
+          max-height: 55px;
+          overflow: hidden;
+          color: #999999;
+          padding: 5px 12px;
+          border-radius: 3px;
+          text-overflow: ellipsis;
+          overflow: hidden; }
+          .flexbox.eventlist .itemClient .content .desp p {
+            line-height: 22px; }
+    .flexbox.eventlist .itemAction {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-basis: 320px; }
+      .flexbox.eventlist .itemAction .type {
+        width: 170px;
+        text-align: center; }
+        .flexbox.eventlist .itemAction .type.Public {
+          color: #1271C6; }
+        .flexbox.eventlist .itemAction .type.Private {
+          color: #E26E40; }
+        .flexbox.eventlist .itemAction .type.Exclusive {
+          color: #67A53F; }
+      .flexbox.eventlist .itemAction .action {
+        width: 147px; }
+        .flexbox.eventlist .itemAction .action .btnviewdetail .btn {
+          width: 100%;
+          border-radius: 3px !important;
+          color: #fff;
+          background: #999999;
+          text-align: left;
+          position: relative; }
+          .flexbox.eventlist .itemAction .action .btnviewdetail .btn::after {
+            position: absolute;
+            top: 13px;
+            right: 13px;
+            border-top: 0.45em solid; }
+        .flexbox.eventlist .itemAction .action .btnviewdetail button.btndelete {
+          color: #ef5350;
+          position: relative; }
+          .flexbox.eventlist .itemAction .action .btnviewdetail button.btndelete svg {
+            height: 15px;
+            position: relative;
+            top: -2px; }
+            .flexbox.eventlist .itemAction .action .btnviewdetail button.btndelete svg path {
+              fill: #ef5350; }
+    .flexbox.eventlist.header .type, .flexbox.eventlist.header .action {
+      text-align: center; }
+
+.card {
+  border: none;
+  border-radius: 0; }
+  .card-header {
+    border-radius: 0 !important;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .card-header .header {
+      font-size: 18px;
+      color: #d21b1d;
+      font-weight: 500; }
+    .card-header .rightbox {
+      display: inline-flex;
+      align-items: center; }
+      .card-header .rightbox .btncreate {
+        background: #d21b1d;
+        border: 0;
+        color: #fff;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-left: 10px; }
+    .card-header .searchbtn {
+      position: relative; }
+      .card-header .searchbtn button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #aaa;
+        background: transparent;
+        border: 0;
+        min-width: 0; }
+      .card-header .searchbtn .searchbox {
+        border-radius: 36px;
+        padding-left: 33px;
+        display: inline-block;
+        width: 200px; }
+
+.pagination {
+  padding-top: 14px;
+  justify-content: flex-end !important; }
+  .pagination .page-link {
+    color: #d21b1d; }
+  .pagination .active .page-link {
+    background: #d21b1d;
+    color: #fff; }
+
+.formOnline {
+  border: 1px solid #dedcdc;
+  border-radius: 3px;
+  text-align: center;
+  padding: 15px 0; }
+  .formOnline .form-check-label {
+    font-weight: 500; }
+
+.subformarea {
+  padding: 15px 20px;
+  background: whitesmoke;
+  border-radius: 3px; }
+
 html body .app.flex-row.align-items-center {
   height: 100vh; }
