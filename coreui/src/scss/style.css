@@ -10137,6 +10137,28 @@ body {
   background: #dbdbdb;
   color: #505050; }
 
+.btnremove {
+  border: 1px solid #dbdbdb;
+  background: transparent;
+  color: #505050; }
+
+.btnupload {
+  position: relative;
+  overflow: hidden;
+  display: inline-block; }
+  .btnupload .btn {
+    color: #fff;
+    background-color: #d21b1d;
+    padding: 5px 20px;
+    border-radius: 36px;
+    font-size: 14px; }
+  .btnupload input[type=file] {
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0; }
+
 .flexbox {
   display: flex;
   align-items: center;
@@ -10298,6 +10320,13 @@ body {
   padding: 15px 20px;
   background: whitesmoke;
   border-radius: 3px; }
+
+label.deleteCol {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  label.deleteCol i {
+    color: rgba(239, 83, 80, 0.7); }
 
 html body .app.flex-row.align-items-center {
   height: 100vh; }

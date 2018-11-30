@@ -174,6 +174,17 @@ class CreateEvent extends React.Component {
                               onBlur={handleBlur}
                               value={values.location} />
                           </FormGroup>
+                            <FormGroup row>
+                              <Col md="3">
+                                <Label htmlFor="file-input">File Upload</Label>
+                              </Col>
+                              <Col md="9">
+                                <div class="btnupload">
+                                  <button class="btn">Upload file</button>
+                                  <Input type="file" id="file-input" name="file-input" />
+                                </div>
+                              </Col>
+                            </FormGroup>
                             <FormGroup>
                               <Label for="newfeature" className="deleteCol">New Feature 1 <i className="fa fa-close"></i></Label>
                               <Input type="text"
