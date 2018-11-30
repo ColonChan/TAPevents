@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputGroup, InputGroupAddon, InputGroupText, FormText, Button, Card, CardHeader, CardBody, Col, CustomInput, Form, FormFeedback, FormGroup, Label, Input, Row, CardFooter } from 'reactstrap';
+import { Modal, ModalBody, ModalFooter, ModalHeader, InputGroup, InputGroupAddon, InputGroupText, FormText, Button, Card, CardHeader, CardBody, Col, CustomInput, Form, FormFeedback, FormGroup, Label, Input, Row, CardFooter } from 'reactstrap';
 import { TextMask, InputAdapter } from 'react-text-mask-hoc';
 import { Formik } from 'formik';
 import * as Yup from 'yup'
@@ -54,8 +54,18 @@ const onSubmit = (values, { setSubmitting, setErrors }) => {
 class CreateEvent extends React.Component {
   constructor(props) {
     super(props)
-    this.touchAll = this.touchAll.bind(this)
+    this.state = {
+      modal: false,
+    };
+    this.touchAll = this.touchAll.bind(this);
+    this.toggle = this.toggle.bind(this);
 
+  }
+
+  toggle() {
+    this.setState({
+      modal: !this.state.modal,
+    });
   }
 
   findFirstError(formName, hasError) {
@@ -164,7 +174,55 @@ class CreateEvent extends React.Component {
                               onBlur={handleBlur}
                               value={values.location} />
                           </FormGroup>
+                            <FormGroup>
+                              <Label for="newfeature" className="deleteCol">New Feature 1 <i className="fa fa-close"></i></Label>
+                              <Input type="text"
+                                name="newfeature"
+                                id="newfeature"
+                                placeholder="New Feature"
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.newfeature} />
+                            </FormGroup>
+                            <FormGroup>
+                              <Label for="newfeature" className="deleteCol">New Feature 2 <i className="fa fa-close"></i></Label>
+                              <Input type="text"
+                                name="newfeature"
+                                id="newfeature"
+                                placeholder="New Feature"
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.newfeature} />
+                            </FormGroup>
+                            <Button onClick={this.toggle} className="mr-1">Add New Feature</Button>
+                            <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+                              <ModalHeader toggle={this.toggle}>Add New Feature</ModalHeader>
+                              <ModalBody>
+                                <Row>
+                                  <Col md="12">
+                                    <FormGroup>
+                                      <Label htmlFor="name">Label</Label>
+                                      <Input type="text" id="name" placeholder="Enter label name" required />
+                                    </FormGroup>
+                                    <FormGroup>
+                                      <Label htmlFor="ccmonth">Kind</Label>
+                                      <Input type="select" name="ccmonth" id="ccmonth">
+                                        <option value="1">text</option>
+                                        <option value="2">number</option>
+                                      </Input>
+                                    </FormGroup>
+                                  </Col>
+                                </Row>
 
+
+
+
+                              </ModalBody>
+                              <ModalFooter>
+                                <Button color="primary" onClick={this.toggle}>Add</Button>{' '}
+                                <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+                              </ModalFooter>
+                            </Modal>
 
 
 
@@ -213,7 +271,10 @@ class CreateEvent extends React.Component {
                             <Label htmlFor="file-input">Brand</Label>
                           </Col>
                           <Col md="9">
-                            <Input type="file" id="file-input" name="file-input" />
+                                <div class="btnupload">
+                                  <button class="btn">Upload a file</button>
+                                  <Input type="file" id="file-input" name="file-input" />
+                                </div>
                           </Col>
                         </FormGroup>
 

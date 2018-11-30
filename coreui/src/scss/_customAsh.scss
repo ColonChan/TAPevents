@@ -1,5 +1,12 @@
 .btnsubmit {  background:$brand-info-color; }
 .btncancel {  background:$brand-litegray-text; color:$brand-dark-text }
+.btnremove {  border:1px solid $brand-litegray-text; background:transparent; color:$brand-dark-text }
+.btnupload {  position: relative; overflow: hidden; display: inline-block;
+  .btn { color: #fff; background-color:$brand-main-color; padding: 5px 20px; border-radius:36px; font-size: 14px;}
+  input[type=file] { font-size: 18px; position: absolute; left: 0; top: 0; opacity: 0;}
+}
+
+
 
 .flexbox { display: flex; align-items: center; justify-content: center;
   &.header {  font-size:16px; color:$brand-dark-text; font-weight: 500; padding:8px 14px !important; }
@@ -74,3 +81,8 @@
   .form-check-label { font-weight:500; }
 }
 .subformarea {  padding:15px 20px; background:whitesmoke; border-radius: 3px; }
+label {
+  &.deleteCol { display: flex; align-items: center; justify-content: space-between;
+    i { color: rgba($brand-danger-color,0.7); }
+  }
+}
