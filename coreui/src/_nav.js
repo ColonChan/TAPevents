@@ -8,6 +8,21 @@ export default {
         variant: 'info',
         text: 'NEW',
       },
-    }
+    },
+    {
+      name: 'EventList',
+      url: '/eventlist',
+      icon: 'icon-speedometer',
+    },
+    {
+      name: 'CreateEvent',
+      url: '/createevent',
+      icon: 'icon-speedometer',
+    },
+    {
+      name: 'EditEvent',
+      url: '/editevent',
+      icon: 'icon-speedometer',
+    },
   ]
 };
