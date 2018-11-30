@@ -29,12 +29,12 @@ class DefaultHeader extends Component {
       <React.Fragment>
         <AppSidebarToggler className="d-lg-none" display="md" mobile />
         <AppNavbarBrand
-          full={{ src: logo, width: 113, height: 36, alt: 'CoreUI Logo' }}
-          minimized={{ src: sygnet, width: 30, height: 30, alt: 'CoreUI Logo' }}
+          full={{ src: logo, width: 113, height: 36, alt: 'App Logo' }}
+          minimized={{ src: sygnet, width: 32, height: 32, alt: 'App Logo' }}
         />
         {/* <AppSidebarToggler className="d-md-down-none" display="lg" /> */}
         <Nav className="ml-auto" navbar>
-          <NavItem className="d-md-down-none">
+          <NavItem className="bordertest">
             <NavLink href="#"><i className="icon-location-pin"></i></NavLink>
           </NavItem>
           <AppHeaderDropdown>
