@@ -1,4 +1,5 @@
-/* Global Class */
+/*===== Global Class =====*/
+ 
 body { color: $brand-text-color; background-color: #edeeef; }
 .wraning-msg { color: $brand-warning-color; }
 .btn {
@@ -20,9 +21,14 @@ body { color: $brand-text-color; background-color: #edeeef; }
     border: 2px solid rgba(#fff, 0.95);
     border-color: rgba(#fff, 0.95);
   }
-  
 }
 .btn-link { color: #1565C0; }
+
+/* for Extend */
+.hdshadow { box-shadow: 0 1px 4px -1px rgba(#000, 0.15); }
+
+/* Default Header Classes */
+.app-header { @extend .hdshadow; }
 
 /* Login Page Classes */
 .frontbk {
@@ -94,7 +100,9 @@ body { color: $brand-text-color; background-color: #edeeef; }
 
 
 
-
+.testheight {
+  min-height: 100vh;
+}
 
 .app-footer {
   color: $gray-400;
