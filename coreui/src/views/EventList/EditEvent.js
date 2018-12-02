@@ -1,5 +1,10 @@
 import React from 'react';
-import { Modal, ModalBody, ModalFooter, ModalHeader, InputGroup, InputGroupAddon, InputGroupText, FormText, Button, Card, CardHeader, CardBody, Col, CustomInput, Form, FormFeedback, FormGroup, Label, Input, Row, CardFooter } from 'reactstrap';
+import {
+  Modal, ModalBody, ModalFooter, ModalHeader, InputGroup, InputGroupAddon, 
+  InputGroupText, FormText, Button, Card, CardHeader, CardBody, Col, 
+  // CustomInput, 
+  Form, FormFeedback, FormGroup, Label, Input, Row, CardFooter 
+} from 'reactstrap';
 import { TextMask, InputAdapter } from 'react-text-mask-hoc';
 import { Formik } from 'formik';
 import * as Yup from 'yup'

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { NavLink } from 'reactstrap';
+import { NavLink, Badge } from 'reactstrap';
 import {
-  InputGroup, InputGroupAddon, Button, CardHeader, Pagination, PaginationItem, PaginationLink, Card, CardBody, Dropdown, DropdownItem, DropdownMenu, DropdownToggle, Input, Form,
-  FormGroup } from 'reactstrap';
+  // InputGroup, FormGroup, 
+  InputGroupAddon, Button, CardHeader, Pagination, PaginationItem, PaginationLink, Card, CardBody, Dropdown, DropdownItem, DropdownMenu, DropdownToggle, Input, Form
+} from 'reactstrap';
 import { SVGIconTrash } from '../Common/svgicon.jsx';
 
 
@@ -56,7 +57,7 @@ class EventList extends Component {
         </li>
       <li className="flexbox eventlist">
           <div className="itemClient">
-            <div className="logo"><img src="http://img.sj33.cn/uploads/allimg/200808/20080817001642866.png" /></div>
+            <div className="logo"><img src="http://img.sj33.cn/uploads/allimg/200808/20080817001642866.png" alt="eventLogo" /></div>
             <div className="content">
               <div className="title online">Why are We Here?</div>
               <div className="date">04, Dec, 2018 7:30pm - 9:55pm <span>- <b className="talker">Jamies Spthill</b></span></div>
@@ -64,16 +65,18 @@ class EventList extends Component {
             </div>
           </div>
           <div className="itemAction">
-            <div className="type Public">Public</div>
+            <div className="type">
+              <Badge className="mr-1 public">Public</Badge>
+            </div>
             <div className="action">
-              <Dropdown className="btnviewdetail" isOpen={this.state.dropdownOpen[0]} toggle={() => {
-                this.toggle(0);
+              <Dropdown className="btnviewdetail" isOpen={this.state.dropdownOpen[1]} toggle={() => {
+                this.toggle(1);
               }}>
                 <DropdownToggle caret>
-                  View Detail
+                  Event Info
                 </DropdownToggle>
                 <DropdownMenu>
-                  <DropdownItem>Update</DropdownItem>
+                  <DropdownItem>Modify</DropdownItem>
                   <DropdownItem className="btndelete">Delete <SVGIconTrash/></DropdownItem>
                 </DropdownMenu>
               </Dropdown>
@@ -82,7 +85,7 @@ class EventList extends Component {
         </li>
       <li className="flexbox eventlist">
         <div className="itemClient">
-          <div className="logo"><img src="http://img.sj33.cn/uploads/allimg/200808/20080817001642866.png"/></div>
+          <div className="logo"><img src="http://img.sj33.cn/uploads/allimg/200808/20080817001642866.png" alt="eventLogo" /></div>
           <div className="content">
             <div className="title online">Why are We Here?</div>
             <div className="date">04, Dec, 2018 7:30pm - 9:55pm <span>- <b className="talker">Jamies Spthill</b></span></div>
@@ -90,16 +93,18 @@ class EventList extends Component {
           </div>
         </div>
         <div className="itemAction">
-            <div className="type Private">Private</div>
+            <div className="type">
+              <Badge className="mr-1 private">Private</Badge>
+            </div>
           <div className="action">
-              <Dropdown className="btnviewdetail" isOpen={this.state.dropdownOpen[0]} toggle={() => {
-                this.toggle(0);
+              <Dropdown className="btnviewdetail" isOpen={this.state.dropdownOpen[2]} toggle={() => {
+                this.toggle(2);
               }}>
                 <DropdownToggle caret>
-                  View Detail
+                  Event Info
                 </DropdownToggle>
                 <DropdownMenu>
-                  <DropdownItem>Update</DropdownItem>
+                  <DropdownItem>Modify</DropdownItem>
                       <DropdownItem className="btndelete">Delete <SVGIconTrash /></DropdownItem>
                 </DropdownMenu>
               </Dropdown>
@@ -108,7 +113,7 @@ class EventList extends Component {
       </li>
         <li className="flexbox eventlist">
           <div className="itemClient">
-            <div className="logo"><img src="http://img.sj33.cn/uploads/allimg/200808/20080817001642866.png" /></div>
+            <div className="logo"><img src="http://img.sj33.cn/uploads/allimg/200808/20080817001642866.png" alt="eventLogo" /></div>
             <div className="content">
               <div className="title offline">Why are We Here?</div>
               <div className="date">12, Dec, 2016 5:30pm - 7:55pm <span>- <b className="talker">Jamies Spthill</b></span></div>
@@ -116,16 +121,18 @@ class EventList extends Component {
             </div>
           </div>
           <div className="itemAction">
-            <div className="type Exclusive">Exclusive</div>
+            <div className="type">
+              <Badge className="mr-1 exclusive">Exclusive</Badge>
+            </div>
             <div className="action">
-              <Dropdown className="btnviewdetail" isOpen={this.state.dropdownOpen[0]} toggle={() => {
-                this.toggle(0);
+              <Dropdown className="btnviewdetail" isOpen={this.state.dropdownOpen[3]} toggle={() => {
+                this.toggle(3);
               }}>
                 <DropdownToggle caret>
-                  View Detail
+                  Event Info
                 </DropdownToggle>
                 <DropdownMenu>
-                  <DropdownItem>Update</DropdownItem>
+                  <DropdownItem>Modify</DropdownItem>
                       <DropdownItem className="btndelete">Delete <SVGIconTrash /></DropdownItem>
                 </DropdownMenu>
               </Dropdown>

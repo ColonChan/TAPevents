@@ -3,10 +3,11 @@
 .btnremove {  border:1px solid $brand-litegray-text; background:transparent; color:$brand-dark-text }
 .btnupload {  position: relative; overflow: hidden; display: inline-block;
   .btn { color: #fff; background-color:$brand-main-color; padding: 5px 20px; border-radius:36px; font-size: 14px;}
-  input[type=file] { font-size: 18px; position: absolute; left: 0; top: 0; opacity: 0;}
+  // input[type=file] { 
+  //   font-size: 18px; 
+  //   position: absolute; left: 0; top: 0; opacity: 0;
+  // }
 }
-
-
 
 .flexbox { display: flex; align-items: center; justify-content: center;
   &.header {  font-size:16px; color:$brand-dark-text; font-weight: 500; padding:8px 14px !important; }
@@ -34,13 +35,14 @@
       }
     }
     .itemAction { display: inline-flex; align-items: center; justify-content: center; flex-basis:320px;
-      .type { width:170px; text-align: center;
-        &.Public { color:#1271C6; }
-        &.Private { color:#E26E40; }
-        &.Exclusive { color:#67A53F; }
+      .type { width:170px; text-align: center; font-size: 1.15rem;
+        .public { background-color: #1271C6; color: #fff; padding: 0.25em 0.6em; }
+        .private { background-color: #f86c6b; color: #fff; padding: 0.25em 0.6em; }
+        .exclusive { background-color: #4dbd74; color: #fff; padding: 0.25em 0.6em; }
       }
       .action { width:147px;
-        .btnviewdetail {
+        .btnviewdetail { width: 128px; margin: auto;
+          .dropdown-menu { min-width: 9rem; }
           .btn {  width:100%; border-radius:3px !important; color:#fff; background:$brand-gray-text; text-align: left; position: relative;
             &::after {  position: absolute; top: 13px; right: 13px; border-top: 0.45em solid;  }
           }
@@ -58,8 +60,18 @@
   }
 }
 
-.card {   border:none; border-radius:0;
-  &-header { border-radius:0 !important; background:#fff; display: flex; align-items: center; justify-content: space-between;
+.event-info + event-info {
+  margin-top: 0.5rem; 
+  @media (min-width: 992px) { margin-top: 0rem;  }
+}
+.card {   
+  // border:none; 
+  border-radius:0;
+  border-color: $border-color; 
+  &-header { 
+    background:#fff; 
+    border-color: $border-color; 
+    border-radius:0 !important; display: flex; align-items: center; justify-content: space-between;
     .header { font-size: 18px; color:$brand-main-color; font-weight:500;   }
     .rightbox { display:inline-flex; align-items: center;
       .btncreate {  background:$brand-main-color; border:0; color:#fff; padding-left:30px; padding-right:30px; margin-left:10px; }
@@ -68,6 +80,14 @@
       button {   position: absolute; top:0;left:0; color:#aaa; background:transparent; border: 0;min-width: 0;  }
       .searchbox { border-radius: 36px; padding-left:33px; display: inline-block; width: 200px;}
     }
+  }
+  &-footer { border-color: $border-color; 
+    // background-color: $border-color; 
+    .form-group { margin-bottom: 0; text-align: right;}
+  }
+  &.bdrcard {
+    border:1px solid $border-color; border-radius: $border-radius; margin-bottom: 0;
+    // .card-body { }
   }
 }
 
@@ -80,9 +100,13 @@
 .formOnline {     border: 1px solid #dedcdc; border-radius: 3px; text-align: center; padding: 15px 0;
   .form-check-label { font-weight:500; }
 }
-.subformarea {  padding:15px 20px; background:whitesmoke; border-radius: 3px; }
-label {
-  &.deleteCol { display: flex; align-items: center; justify-content: space-between;
-    i { color: rgba($brand-danger-color,0.7); }
+.subformarea { padding:15px 20px; background:whitesmoke; border-radius: 3px; }
+.featurebox { display: flex; align-items: center; justify-content: space-between;
+    .delcol { padding: 4px 8px 4px 4px;  line-height: 1.25rem; min-width: auto; }
+    i { font-size: 1.25rem; }
   }
+.featurea-ddbox {
+  text-align: right;
+  .addcol { padding: 4px 8px 4px 4px; line-height: 1.25rem; min-width: auto; }
+  i { font-size: 1.25rem; margin-right: 4px; }
 }
