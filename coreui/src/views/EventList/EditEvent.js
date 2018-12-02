@@ -104,6 +104,9 @@ class EditEvent extends React.Component {
         <Card>
           <CardHeader>
             <span className="header">Edit Event</span>
+            <div className="rightbox">
+              <Button type="reset" className="mr-1 btnremove">Remove Event</Button>
+            </div>
           </CardHeader>
           <Formik
             initialValues={initialValues}
@@ -178,6 +181,17 @@ class EditEvent extends React.Component {
                                 onChange={handleChange}
                                 onBlur={handleBlur}
                                 value={values.location} />
+                            </FormGroup>
+                            <FormGroup row>
+                              <Col md="3">
+                                <Label htmlFor="file-input">File Upload</Label>
+                              </Col>
+                              <Col md="9">
+                                <div class="btnupload">
+                                  <button class="btn">Upload file</button>
+                                  <Input type="file" id="file-input" name="file-input" />
+                                </div>
+                              </Col>
                             </FormGroup>
                             <FormGroup>
                               <Label for="newfeature" className="deleteCol">New Feature 1 <i className="fa fa-close"></i></Label>
@@ -277,7 +291,10 @@ class EditEvent extends React.Component {
                                 <Label htmlFor="file-input">Brand</Label>
                               </Col>
                               <Col md="9">
-                                <Input type="file" id="file-input" name="file-input" />
+                                <div class="btnupload">
+                                  <button class="btn">Upload a file</button>
+                                  <Input type="file" id="file-input" name="file-input" />
+                                </div>
                               </Col>
                             </FormGroup>
 
@@ -379,7 +396,7 @@ class EditEvent extends React.Component {
                       <FormGroup>
                         <Button type="submit" color="primary" className="mr-1 btnsubmit" disabled={isSubmitting || !isValid}>{isSubmitting ? 'Wait...' : 'Save Changes'}</Button>
                         <Button type="reset" className="mr-1 btncancel">Cancel</Button>
-                        <Button type="reset" className="mr-1 btnremove">Remove Event</Button>
+
                       </FormGroup>
 
                     </CardFooter>

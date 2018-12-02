@@ -7,6 +7,7 @@ import {
 import { SVGIconTrash } from '../Common/svgicon.jsx';
 
 
+
 class EventList extends Component {
   constructor(props) {
     super(props);
@@ -57,7 +58,7 @@ class EventList extends Component {
         </li>
       <li className="flexbox eventlist">
           <div className="itemClient">
-            <div className="logo"><img src="http://img.sj33.cn/uploads/allimg/200808/20080817001642866.png" alt="eventLogo" /></div>
+            <div className="logo"><img src="http://pluspng.com/img-png/pepsi-logo-eps-png-pepsi-vertical-logo-format-ai-222.png" alt="eventLogo" /></div>
             <div className="content">
               <div className="title online">Why are We Here?</div>
               <div className="date">04, Dec, 2018 7:30pm - 9:55pm <span>- <b className="talker">Jamies Spthill</b></span></div>
@@ -85,7 +86,7 @@ class EventList extends Component {
         </li>
       <li className="flexbox eventlist">
         <div className="itemClient">
-          <div className="logo"><img src="http://img.sj33.cn/uploads/allimg/200808/20080817001642866.png" alt="eventLogo" /></div>
+          <div className="logo"><img src="http://pluspng.com/img-png/logo-ups-png-file-united-parcel-service-logo-2014-svg-644.png" alt="eventLogo" /></div>
           <div className="content">
             <div className="title online">Why are We Here?</div>
             <div className="date">04, Dec, 2018 7:30pm - 9:55pm <span>- <b className="talker">Jamies Spthill</b></span></div>
@@ -113,9 +114,9 @@ class EventList extends Component {
       </li>
         <li className="flexbox eventlist">
           <div className="itemClient">
-            <div className="logo"><img src="http://img.sj33.cn/uploads/allimg/200808/20080817001642866.png" alt="eventLogo" /></div>
+            <div className="logo"><img src="http://pluspng.com/img-png/dbs-logo-png-dbs-bank-logo-logotype-logo-dbs-png-4519.png" alt="eventLogo" /></div>
             <div className="content">
-              <div className="title offline">Why are We Here?</div>
+              <div className="title offline">Why are We Here? <Badge color="secondary" className="ml-1">Expired</Badge></div>
               <div className="date">12, Dec, 2016 5:30pm - 7:55pm <span>- <b className="talker">Jamies Spthill</b></span></div>
               <div className="desp">A strong and clear event description excites punters: tell them what will happen at the event, who will be speaking, and what they might get out of attending. Your event may be brilliant, but no one else will ...</div>
             </div>
@@ -133,7 +134,7 @@ class EventList extends Component {
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>Modify</DropdownItem>
-                      <DropdownItem className="btndelete">Delete <SVGIconTrash /></DropdownItem>
+                  <DropdownItem className="btndelete">Delete <SVGIconTrash /></DropdownItem>
                 </DropdownMenu>
               </Dropdown>
             </div>

@@ -7,7 +7,7 @@ import {
 } from 'reactstrap';
 import { TextMask, InputAdapter } from 'react-text-mask-hoc';
 import { Formik } from 'formik';
-import * as Yup from 'yup'
+import * as Yup from 'yup';
 
 
 const validationSchema = function (values) {
@@ -173,14 +173,27 @@ class CreateEvent extends React.Component {
                       onBlur={handleBlur}
                       value={values.location} />
                   </FormGroup>
+                  <FormGroup row>
+                    <Col md="3">
+                      <Label htmlFor="fileUpload">Attachment</Label>
+                    </Col>
+                    <Col md="9">
+                      <div className="btnupload">
+                        {/* <button class="btn">Upload file</button> */}
+                        <Input type="file" id="fileUpload" name="file-upload" />
+                      </div>
+                    </Col>
+                  </FormGroup>
                   <FormGroup>
                     <Label for="newfeature">Add Feature</Label>
                     <Card className="bdrcard">
                       <CardBody className="py-2 px-3">
-                        <div className="featurebox">
+                        <ol className="featurebox">
+                        <li>
                           Frist Feature: Customize appointment scheduling among the participants 
                           <Button color="danger" className="delcol"><i className="icon-close"></i></Button> {/* onClick to remove */}
-                        </div>
+                        </li>
+                        </ol>
                       </CardBody>
                     </Card>
                   </FormGroup>
@@ -224,29 +237,29 @@ class CreateEvent extends React.Component {
                       <Label>Type</Label>
                     </Col>
                     <Col md="9">
-                      <FormGroup check className="radio">
-                        <Input className="form-check-input" type="radio" id="radio1" name="radios" value="option1" />
-                        <Label check className="form-check-label" htmlFor="radio1">Public</Label>
+                      <FormGroup check inline>
+                        <Input className="form-check-input" type="radio" id="typeRadio1" name="type" value="public" />
+                        <Label check className="form-check-label" htmlFor="typeRadio1">Public</Label>
                       </FormGroup>
-                      <FormGroup check className="radio">
-                        <Input className="form-check-input" type="radio" id="radio2" name="radios" value="option2" />
-                        <Label check className="form-check-label" htmlFor="radio2">Private</Label>
+                      <FormGroup check inline>
+                        <Input className="form-check-input" type="radio" id="typeRadio2" name="type" value="private" />
+                        <Label check className="form-check-label" htmlFor="typeRadio2">Private</Label>
                       </FormGroup>
-                      <FormGroup check className="radio">
-                        <Input className="form-check-input" type="radio" id="radio3" name="radios" value="option3" />
-                        <Label check className="form-check-label" htmlFor="radio3">Exclusive</Label>
+                      <FormGroup check inline>
+                        <Input className="form-check-input" type="radio" id="typeRadio3" name="type" value="exclusive" />
+                        <Label check className="form-check-label"  htmlFor="typeRadio3">Exclusive</Label>
                       </FormGroup>
                     </Col>
                   </FormGroup>
 
                   <FormGroup row>
                     <Col md="3">
-                      <Label className="mt-1" htmlFor="file-input">Logo</Label>
+                      <Label className="mt-1" htmlFor="logoUpload">Logo</Label>
                     </Col>
                     <Col md="9">
                       <div className="btnupload">
                         {/* <button className="btn">Upload a logo</button> */}
-                        <Input type="file" id="file-input" name="logo-upload" label="Upload" />
+                        <Input type="file" id="logoUpload" name="logo-upload" label="Upload" />
                       </div>
                     </Col>
                   </FormGroup>
@@ -342,12 +355,12 @@ class CreateEvent extends React.Component {
                     </Col>
                     <Col md="9">
                       <FormGroup check inline>
-                        <Input className="form-check-input" type="radio" id="inline-radio1" name="inline-radios" value="option1" />
-                        <Label className="form-check-label" check htmlFor="inline-radio1">Online</Label>
+                        <Input className="form-check-input" type="radio" id="status-radio1" name="status" value="oline" />
+                        <Label className="form-check-label" check htmlFor="inlineRadio1">Online</Label>
                       </FormGroup>
                       <FormGroup check inline>
-                        <Input className="form-check-input" type="radio" id="inline-radio2" name="inline-radios" value="option2" />
-                        <Label className="form-check-label" check htmlFor="inline-radio2">Offline</Label>
+                        <Input className="form-check-input" type="radio" id="inline-radio2" name="status" value="offline" />
+                        <Label className="form-check-label" check htmlFor="statusRadio2">Offline</Label>
                       </FormGroup>
                     </Col>
                   </FormGroup>
