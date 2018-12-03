@@ -1,6 +1,7 @@
 /*===== Global Class =====*/
  
 body { color: $brand-text-color; background-color: #edeeef; }
+.container-fluid { max-width: 1400px; }
 .wraning-msg { color: $brand-warning-color; }
 .btn {
   min-width: 108px;

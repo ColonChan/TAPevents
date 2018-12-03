@@ -25,6 +25,11 @@ export default {
       icon: 'icon-speedometer',
     },
     {
+      name: 'userAdmin',
+      url: '/useradmin',
+      icon: 'icon-user',
+    },
+    {
       name: 'Feedback',
       url: '/feedback',
       icon: 'icon-speedometer',

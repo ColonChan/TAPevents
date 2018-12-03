@@ -7,6 +7,11 @@ function Loading() {
   return <div>Loading...</div>;
 }
 
+const userAdmin = Loadable({
+  loader: () => import('./views/User/userAdmin'),
+  loading: Loading,
+});
+
 const AgendaCreate = Loadable({
   loader: () => import('./views/Drawer/AgendaCreate'),
   loading: Loading,
@@ -43,7 +48,7 @@ const Dashboard = Loadable({
 });
 
 const Login = Loadable({
-  loader: () => import('./views/Dashboard'),
+  loader: () => import('./views/Pages/Login'),
   loading: Loading,
 });
 
@@ -55,6 +60,7 @@ const routes = [
   { path: '/eventlist', name: 'EventList', component: EventList },
   { path: '/createevent', name: 'CreateEvent', component: CreateEvent },
   { path: '/editevent', name: 'EditEvent', component: EditEvent },
+  { path: '/useradmin', name: 'userAdmin', component: userAdmin },
   { path: '/feedback', name: 'Feedback', component: Feedback },
   { path: '/agenda', name: 'Agenda', component: Agenda },
   { path: '/agendacreate', name: 'AgendaCreate', component: AgendaCreate },
