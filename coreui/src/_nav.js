@@ -24,5 +24,20 @@ export default {
       url: '/editevent',
       icon: 'icon-speedometer',
     },
+    {
+      name: 'Feedback',
+      url: '/feedback',
+      icon: 'icon-speedometer',
+    },
+    {
+      name: 'Agenda',
+      url: '/agenda',
+      icon: 'icon-speedometer',
+    },
+    {
+      name: 'AgendaCreate',
+      url: '/agendacreate',
+      icon: 'icon-speedometer',
+    },
   ]
 };

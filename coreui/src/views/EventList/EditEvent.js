@@ -153,7 +153,6 @@ class EditEvent extends React.Component {
                                 name="talkerName"
                                 id="talkerName"
                                 placeholder="Talker Name"
-                                autoComplete="family-name"
                                 valid={!errors.talkerName}
                                 invalid={touched.talkerName && !!errors.talkerName}
                                 required
