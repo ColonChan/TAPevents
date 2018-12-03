@@ -29,5 +29,20 @@ export default {
       url: '/useradmin',
       icon: 'icon-user',
     },
+    {
+      name: 'Feedback',
+      url: '/feedback',
+      icon: 'icon-speedometer',
+    },
+    {
+      name: 'Agenda',
+      url: '/agenda',
+      icon: 'icon-speedometer',
+    },
+    {
+      name: 'AgendaCreate',
+      url: '/agendacreate',
+      icon: 'icon-speedometer',
+    },
   ]
 };

@@ -12,6 +12,21 @@ const userAdmin = Loadable({
   loading: Loading,
 });
 
+const AgendaCreate = Loadable({
+  loader: () => import('./views/Drawer/AgendaCreate'),
+  loading: Loading,
+});
+
+const Agenda = Loadable({
+  loader: () => import('./views/Drawer/Agenda'),
+  loading: Loading,
+});
+
+const Feedback = Loadable({
+  loader: () => import('./views/Drawer/Feedback'),
+  loading: Loading,
+});
+
 const CreateEvent = Loadable({
   loader: () => import('./views/EventList/CreateEvent'),
   loading: Loading,
@@ -46,6 +61,9 @@ const routes = [
   { path: '/createevent', name: 'CreateEvent', component: CreateEvent },
   { path: '/editevent', name: 'EditEvent', component: EditEvent },
   { path: '/useradmin', name: 'userAdmin', component: userAdmin },
+  { path: '/feedback', name: 'Feedback', component: Feedback },
+  { path: '/agenda', name: 'Agenda', component: Agenda },
+  { path: '/agendacreate', name: 'AgendaCreate', component: AgendaCreate },
 ];
 
 export default routes;
