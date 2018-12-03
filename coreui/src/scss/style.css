@@ -10378,16 +10378,6 @@ body {
     .featurebox li i {
       font-size: 1.25rem; }
 
-.featurea-ddbox {
-  text-align: right; }
-  .featurea-ddbox .addcol {
-    padding: 4px 8px 4px 4px;
-    line-height: 1.25rem;
-    min-width: auto; }
-  .featurea-ddbox i {
-    font-size: 1.25rem;
-    margin-right: 4px; }
-
 ul.agendalist {
   width: 100%; }
   ul.agendalist li {
@@ -10433,6 +10423,16 @@ ul.agendalist {
       background: #f3f3f3; }
     ul.agendalist li:last-child:before {
       display: none; }
+
+.featurea-ddbox {
+  text-align: right; }
+  .featurea-ddbox .addcol {
+    padding: 4px 8px 4px 4px;
+    line-height: 1.25rem;
+    min-width: auto; }
+  .featurea-ddbox i {
+    font-size: 1.25rem;
+    margin-right: 4px; }
 
 html body .app.flex-row.align-items-center {
   height: 100vh; }
