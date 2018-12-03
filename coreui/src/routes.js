@@ -7,6 +7,11 @@ function Loading() {
   return <div>Loading...</div>;
 }
 
+const userAdmin = Loadable({
+  loader: () => import('./views/User/userAdmin'),
+  loading: Loading,
+});
+
 const CreateEvent = Loadable({
   loader: () => import('./views/EventList/CreateEvent'),
   loading: Loading,
@@ -28,7 +33,7 @@ const Dashboard = Loadable({
 });
 
 const Login = Loadable({
-  loader: () => import('./views/Dashboard'),
+  loader: () => import('./views/Pages/Login'),
   loading: Loading,
 });
 
@@ -40,6 +45,7 @@ const routes = [
   { path: '/eventlist', name: 'EventList', component: EventList },
   { path: '/createevent', name: 'CreateEvent', component: CreateEvent },
   { path: '/editevent', name: 'EditEvent', component: EditEvent },
+  { path: '/useradmin', name: 'userAdmin', component: userAdmin },
 ];
 
 export default routes;

@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Modal, ModalBody, ModalFooter, ModalHeader, InputGroup, InputGroupAddon, 
   InputGroupText, FormText, Button, Card, CardHeader, CardBody, Col, 
-  // CustomInput, 
   Form, FormFeedback, FormGroup, Label, Input, Row, CardFooter 
 } from 'reactstrap';
 import { TextMask, InputAdapter } from 'react-text-mask-hoc';
@@ -105,7 +104,13 @@ class EditEvent extends React.Component {
           <CardHeader>
             <span className="header">Edit Event</span>
             <div className="rightbox">
-              <Button type="reset" className="mr-1 btnremove">Remove Event</Button>
+            <Input type="select" name="ccmonth" id="ccmonth">
+                    <option value="1">[Risk Management Series – Professional Liability] Professional Liability Part I – Cyber Liability</option>
+                    <option value="2">[Risk Management Series – Professional Liability] Professional Liability Part II – Cyber Liability</option>
+                    <option value="3">[Risk Management Series – Professional Liability] Professional Liability Part III – Cyber Liability</option>
+                    <option value="4">[Risk Management Series – Professional Liability] Professional Liability Part IV – Cyber Liability</option>
+                    <option value="5">[Risk Management Series – Professional Liability] Professional Liability Part V – Cyber Liability</option>
+                  </Input>
             </div>
           </CardHeader>
           <Formik
@@ -127,281 +132,233 @@ class EditEvent extends React.Component {
                 handleReset,
                 setTouched
               }) => (
-                  <span>
-                    <CardBody>
-
-
-                      <Row>
-                        <Col lg="8">
-                          <Form onSubmit={handleSubmit} noValidate name='simpleForm'>
-
-
-                            <FormGroup>
-                              <Label for="eventName">Event Name</Label>
-                              <Input type="text"
-                                name="eventName"
-                                id="eventName"
-                                placeholder="Event Name"
-                                autoComplete="given-name"
-                                valid={!errors.eventName}
-                                invalid={touched.eventName && !!errors.eventName}
-                                autoFocus={true}
-                                required
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                                value={values.eventName} />
-                              <FormFeedback>{errors.eventName}</FormFeedback>
-                            </FormGroup>
-                            <FormGroup>
-                              <Label for="talkerName">Talker Name</Label>
-                              <Input type="text"
-                                name="talkerName"
-                                id="talkerName"
-                                placeholder="Talker Name"
-                                autoComplete="family-name"
-                                valid={!errors.talkerName}
-                                invalid={touched.talkerName && !!errors.talkerName}
-                                required
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                                value={values.talkerName} />
-                              <FormFeedback>{errors.talkerName}</FormFeedback>
-                            </FormGroup>
-                            <FormGroup>
-                              <Label for="talkerName">Description</Label>
-                              <Input type="textarea" name="textarea-input" id="textarea-input" rows="8"
-                                placeholder="Content..." />
-                            </FormGroup>
-                            <FormGroup>
-                              <Label for="talkerName">Location</Label>
-                              <Input type="text"
-                                name="location"
-                                id="location"
-                                placeholder="location"
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                                value={values.location} />
-                            </FormGroup>
-                            <FormGroup row>
-                              <Col md="3">
-                                <Label htmlFor="file-input">File Upload</Label>
-                              </Col>
-                              <Col md="9">
-                                <div class="btnupload">
-                                  <button class="btn">Upload file</button>
-                                  <Input type="file" id="file-input" name="file-input" />
-                                </div>
-                              </Col>
-                            </FormGroup>
-                            <FormGroup>
-                              <Label for="newfeature" className="deleteCol">New Feature 1 <i className="fa fa-close"></i></Label>
-                              <Input type="text"
-                                name="newfeature"
-                                id="newfeature"
-                                placeholder="New Feature"
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                                value={values.newfeature} />
-                            </FormGroup>
-                            <FormGroup>
-                              <Label for="newfeature" className="deleteCol">New Feature 2 <i className="fa fa-close"></i></Label>
-                              <Input type="text"
-                                name="newfeature"
-                                id="newfeature"
-                                placeholder="New Feature"
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                                value={values.newfeature} />
-                            </FormGroup>
-                            <Button onClick={this.toggle} className="mr-1">Add New Feature</Button>
-                            <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-                              <ModalHeader toggle={this.toggle}>Add New Feature</ModalHeader>
-                              <ModalBody>
-                                <Row>
-                                  <Col md="12">
-                                    <FormGroup>
-                                      <Label htmlFor="name">Label</Label>
-                                      <Input type="text" id="name" placeholder="Enter label name" required />
-                                    </FormGroup>
-                                    <FormGroup>
-                                      <Label htmlFor="ccmonth">Kind</Label>
-                                      <Input type="select" name="ccmonth" id="ccmonth">
-                                        <option value="1">text</option>
-                                        <option value="2">number</option>
-                                      </Input>
-                                    </FormGroup>
-                                  </Col>
-                                </Row>
-
-
-
-
-                              </ModalBody>
-                              <ModalFooter>
-                                <Button color="primary" onClick={this.toggle}>Add</Button>{' '}
-                                <Button color="secondary" onClick={this.toggle}>Cancel</Button>
-                              </ModalFooter>
-                            </Modal>
-
-
-
-
-
-                          </Form>
-                        </Col>
-                        <Col lg="4">
-                          <FormGroup row>
-
-                            <Col md="12">
-                              <div className="formOnline">
-                                <FormGroup check inline>
-                                  <Input className="form-check-input" type="radio" id="inline-radio1" name="inline-radios" value="option1" />
-                                  <Label className="form-check-label" check htmlFor="inline-radio1">Online</Label>
-                                </FormGroup>
-                                <FormGroup check inline>
-                                  <Input className="form-check-input" type="radio" id="inline-radio2" name="inline-radios" value="option2" />
-                                  <Label className="form-check-label" check htmlFor="inline-radio2">Offline</Label>
-                                </FormGroup>
+              <span>
+                <CardBody>
+                  <Row>
+                    <Col lg="7" className="event-info">
+                      <Form onSubmit={handleSubmit} noValidate name='simpleForm'>
+                        <FormGroup>
+                          <Label for="eventName">Event Name</Label>
+                          <Input type="text"
+                            name="eventName"
+                            id="eventName"
+                            placeholder="Event Name"
+                            autoComplete="given-name"
+                            valid={!errors.eventName}
+                            invalid={touched.eventName && !!errors.eventName}
+                            autoFocus={true}
+                            required
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            value={values.eventName} />
+                          <FormFeedback>{errors.eventName}</FormFeedback>
+                        </FormGroup>
+                        <FormGroup>
+                          <Label for="talkerName">Talker Name</Label>
+                          <Input type="text"
+                            name="talkerName"
+                            id="talkerName"
+                            placeholder="Talker Name"
+                            autoComplete="family-name"
+                            valid={!errors.talkerName}
+                            invalid={touched.talkerName && !!errors.talkerName}
+                            required
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            value={values.talkerName} />
+                          <FormFeedback>{errors.talkerName}</FormFeedback>
+                        </FormGroup>
+                        <FormGroup>
+                          <Label for="talkerName">Description</Label>
+                          <Input type="textarea" name="event-description" id="eventDescription" rows="4"
+                            placeholder="Description" />
+                        </FormGroup>
+                        <FormGroup>
+                          <Label for="talkerName">Location</Label>
+                          <Input type="textarea" name="event-location" id="eventLocation" rows="3"
+                            placeholder="Location"
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            value={values.location} />
+                        </FormGroup>
+                        <FormGroup>
+                          <Label for="newfeature">Add Feature</Label>
+                          <Card className="bdrcard">
+                            <CardBody className="py-2 px-3">
+                              <ol className="featurelist">
+                                <li>
+                                  <div className="featurebox">
+                                    Frist Feature: Customize appointment scheduling among the participants
+                                    <Button type="button" color="danger" className="delcol"><i className="icon-close"></i></Button>
+                                  </div>
+                                </li>
+                              </ol>
+                              <div className="feature-addbox">
+                                <Button color="primary" onClick={this.toggle} className="addcol mr-1"><i className="icon-plus"></i> Add</Button>
                               </div>
-                            </Col>
-                          </FormGroup>
-                          <div className="subformarea">
-                            <FormGroup row>
-                              <Col md="3">
-                                <Label>Type</Label>
-                              </Col>
-                              <Col md="9">
-                                <FormGroup check className="radio">
-                                  <Input className="form-check-input" type="radio" id="radio1" name="radios" value="option1" />
-                                  <Label check className="form-check-label" htmlFor="radio1">Public</Label>
-                                </FormGroup>
-                                <FormGroup check className="radio">
-                                  <Input className="form-check-input" type="radio" id="radio2" name="radios" value="option2" />
-                                  <Label check className="form-check-label" htmlFor="radio2">Private</Label>
-                                </FormGroup>
-                                <FormGroup check className="radio">
-                                  <Input className="form-check-input" type="radio" id="radio3" name="radios" value="option3" />
-                                  <Label check className="form-check-label" htmlFor="radio3">Exclusive</Label>
-                                </FormGroup>
+                            </CardBody>
+                          </Card>
+                        </FormGroup>
+                      </Form>
+                    </Col>
 
-                              </Col>
+                    <Col lg="5" className="event-info">
+                      <div className="subformarea">
+                        <FormGroup row>
+                          <Col md="3">
+                            <Label>Type</Label>
+                          </Col>
+                          <Col md="9">
+                            <FormGroup check inline>
+                              <Input className="form-check-input" type="radio" id="typeRadio1" name="type" value="public" />
+                              <Label check className="form-check-label" htmlFor="typeRadio1">Public</Label>
                             </FormGroup>
-                            <FormGroup row>
-                              <Col md="3">
-                                <Label htmlFor="file-input">Brand</Label>
-                              </Col>
-                              <Col md="9">
-                                <div class="btnupload">
-                                  <button class="btn">Upload a file</button>
-                                  <Input type="file" id="file-input" name="file-input" />
-                                </div>
-                              </Col>
+                            <FormGroup check inline>
+                              <Input className="form-check-input" type="radio" id="typeRadio2" name="type" value="private" />
+                              <Label check className="form-check-label" htmlFor="typeRadio2">Private</Label>
                             </FormGroup>
+                            <FormGroup check inline>
+                              <Input className="form-check-input" type="radio" id="typeRadio3" name="type" value="exclusive" />
+                              <Label check className="form-check-label"  htmlFor="typeRadio3">Exclusive</Label>
+                            </FormGroup>
+                          </Col>
+                        </FormGroup>
 
-                            <Row>
-                              <Col md={12}>
-                                <FormGroup>
-                                  <Label for="startDate">Start Date</Label>
-                                  <InputGroup>
-                                    <InputGroupAddon addonType="prepend">
-                                      <InputGroupText><i className="fa fa-calendar"></i></InputGroupText>
-                                    </InputGroupAddon>
-                                    <TextMask
-                                      mask={[/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]}
-                                      Component={InputAdapter}
-                                      className="form-control"
-                                      onChange={handleChange}
-                                      onBlur={handleBlur}
-                                      value={values.startdate}
-                                    />
-                                  </InputGroup>
-                                  <FormText color="muted">
-                                    ex. 21/06/2016
-                                </FormText>
-                                </FormGroup>
-                              </Col>
-                              <Col md={12}>
-                                <FormGroup>
-                                  <Label for="startDate">Start Time</Label>
-                                  <InputGroup>
-                                    <InputGroupAddon addonType="prepend">
-                                      <InputGroupText><i className="fa fa-clock-o"></i></InputGroupText>
-                                    </InputGroupAddon>
-                                    <TextMask
-                                      mask={[/\d/, /\d/, ':', /\d/, /\d/]}
-                                      Component={InputAdapter}
-                                      className="form-control"
-                                      onChange={handleChange}
-                                      onBlur={handleBlur}
-                                      value={values.starttime}
-                                    />
-                                  </InputGroup>
-                                  <FormText color="muted">
-                                    ex. 09:30
-                                </FormText>
-                                </FormGroup>
-                              </Col>
+                        <FormGroup row>
+                          <Col md="3">
+                            <Label className="mt-1" htmlFor="logoUpload">Logo</Label>
+                          </Col>
+                          <Col md="9">
+                            <div className="btnupload">
+                              {/* <button className="btn">Upload a logo</button> */}
+                              <Input type="file" id="logoUpload" name="logo-upload" label="Upload" />
+                            </div>
+                          </Col>
+                        </FormGroup>
+                        
+                        {/* <FormGroup row>
+                          <Col md="3">
+                            <Label htmlFor="fileUpload">Attachment</Label>
+                          </Col>
+                          <Col md="9">
+                            <div className="btnupload">
+                              <Input type="file" id="fileUpload" name="file-upload" />
+                            </div>
+                          </Col>
+                        </FormGroup> */}
 
+                        <FormGroup row>
+                          <Col md="3">
+                            <Label className="mt-1" for="startDate">Start Date</Label>
+                          </Col>
+                          <Col md="9">
+                            <InputGroup>
+                              <InputGroupAddon addonType="prepend">
+                                <InputGroupText><i className="fa fa-calendar"></i></InputGroupText>
+                              </InputGroupAddon>
+                              <Input type="date" id="startDate" name="start-date" placeholder="date"
+                                className="form-control"
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.startdate}
+                              />
+                            </InputGroup>
+                            <FormText color="muted"> ex. 21/06/2019 </FormText>
+                          </Col>
+                        </FormGroup>
 
-                              <Col md={12}>
+                        <FormGroup row>
+                          <Col md="3">
+                            <Label className="mt-1" for="startDate">Start Time</Label>
+                          </Col>
+                          <Col md="9">
+                            <InputGroup>
+                              <InputGroupAddon addonType="prepend">
+                                <InputGroupText><i className="fa fa-clock-o"></i></InputGroupText>
+                              </InputGroupAddon>
+                              <TextMask id="startTime" name="start-time" placeholder="hh:mm"
+                                mask={[/\d/, /\d/, ':', /\d/, /\d/]}
+                                Component={InputAdapter}
+                                className="form-control"
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.starttime}
+                              />
+                            </InputGroup>
+                            <FormText color="muted"> ex. 09:30 </FormText>
+                          </Col>
+                        </FormGroup>
 
-                                <FormGroup>
-                                  <Label for="endDate">End Date</Label>
-                                  <InputGroup>
-                                    <InputGroupAddon addonType="prepend">
-                                      <InputGroupText><i className="fa fa-calendar"></i></InputGroupText>
-                                    </InputGroupAddon>
-                                    <TextMask
-                                      mask={[/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]}
-                                      Component={InputAdapter}
-                                      className="form-control"
-                                      onChange={handleChange}
-                                      onBlur={handleBlur}
-                                      value={values.startdate}
-                                    />
-                                  </InputGroup>
-                                  <FormText color="muted">
-                                    ex. 21/06/2016
-                                </FormText>
-                                </FormGroup>
-                              </Col>
-                              <Col md={12}>
-                                <FormGroup>
-                                  <Label for="startDate">End Time</Label>
-                                  <InputGroup>
-                                    <InputGroupAddon addonType="prepend">
-                                      <InputGroupText><i className="fa fa-clock-o"></i></InputGroupText>
-                                    </InputGroupAddon>
-                                    <TextMask
-                                      mask={[/\d/, /\d/, ':', /\d/, /\d/]}
-                                      Component={InputAdapter}
-                                      className="form-control"
-                                      onChange={handleChange}
-                                      onBlur={handleBlur}
-                                      value={values.endtime}
-                                    />
-                                  </InputGroup>
-                                  <FormText color="muted">
-                                    ex. 15:30
-                                </FormText>
-                                </FormGroup>
-                              </Col>
-                            </Row>
-                          </div>
-                        </Col>
-                      </Row>
+                        <FormGroup row>
+                          <Col md="3">
+                            <Label className="mt-1" for="endDate">End Date</Label>
+                          </Col>
+                          <Col md="9">
+                            <InputGroup>
+                              <InputGroupAddon addonType="prepend">
+                                <InputGroupText><i className="fa fa-calendar"></i></InputGroupText>
+                              </InputGroupAddon>
+                              <Input type="date" id="endDate" name="end-date" placeholder="date"
+                                className="form-control"
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.enddate}
+                              />
+                            </InputGroup>
+                            <FormText color="muted"> ex. 21/07/2019 </FormText>
+                          </Col>
+                        </FormGroup>
 
-                    </CardBody>
-                    <CardFooter>
-                      <FormGroup>
-                        <Button type="submit" color="primary" className="mr-1 btnsubmit" disabled={isSubmitting || !isValid}>{isSubmitting ? 'Wait...' : 'Save Changes'}</Button>
-                        <Button type="reset" className="mr-1 btncancel">Cancel</Button>
-
-                      </FormGroup>
-
-                    </CardFooter>
-                  </span>
-                )} />
+                        <FormGroup row className="mb-0">
+                          <Col md="3">
+                            <Label className="mt-1" for="startDate">End Time</Label>
+                          </Col>
+                          <Col md="9">
+                            <InputGroup>
+                              <InputGroupAddon addonType="prepend">
+                                <InputGroupText><i className="fa fa-clock-o"></i></InputGroupText>
+                              </InputGroupAddon>
+                              <TextMask id="endTime" name="end-time" placeholder="hh:mm"
+                                mask={[/\d/, /\d/, ':', /\d/, /\d/]}
+                                Component={InputAdapter}
+                                className="form-control"
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.endtime}
+                              />
+                            </InputGroup>
+                            <FormText color="muted"> ex. 15:30 </FormText>
+                          </Col>
+                        </FormGroup>
+                      </div>
+                      {/* <div className="subformarea mt-2">
+                        <FormGroup row className="mb-0">
+                          <Col md="3">
+                            <Label>Status</Label>
+                          </Col>
+                          <Col md="9">
+                            <FormGroup check inline>
+                              <Input className="form-check-input" type="radio" id="status-radio1" name="status" value="oline" />
+                              <Label className="form-check-label" check htmlFor="inlineRadio1">Online</Label>
+                            </FormGroup>
+                            <FormGroup check inline>
+                              <Input className="form-check-input" type="radio" id="inline-radio2" name="status" value="offline" />
+                              <Label className="form-check-label" check htmlFor="statusRadio2">Offline</Label>
+                            </FormGroup>
+                          </Col>
+                        </FormGroup>
+                      </div> */}
+                    </Col>
+                  </Row>
+                </CardBody>
+                <CardFooter>
+                  <FormGroup>
+                    <Button type="submit" color="primary" className="mr-1 btnsubmit" disabled={isSubmitting || !isValid}>{isSubmitting ? 'Wait...' : 'Create'}</Button>
+                    <Button type="reset" color="secondary " className="mr-1" onClick={handleReset}>Reset</Button>
+                  </FormGroup>
+                </CardFooter>
+              </span>
+            )} />
         </Card>
       </div>
     )

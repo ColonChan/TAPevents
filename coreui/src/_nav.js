@@ -24,5 +24,10 @@ export default {
       url: '/editevent',
       icon: 'icon-speedometer',
     },
+    {
+      name: 'userAdmin',
+      url: '/useradmin',
+      icon: 'icon-user',
+    },
   ]
 };

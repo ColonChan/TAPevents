@@ -36,7 +36,7 @@ class DefaultHeader extends Component {
         {/* <AppSidebarToggler className="d-md-down-none" display="lg" /> */}
         <Nav className="ml-auto" navbar>
           <NavItem className="border-item">
-            <NavLink href="#"><i className="cui-user"></i></NavLink>
+            <NavLink href="/#/useradmin"><i className="cui-user"></i></NavLink>
           </NavItem>
           <NavItem className="border-item">
             <NavLink href="#"><i className="cui-settings"></i></NavLink>

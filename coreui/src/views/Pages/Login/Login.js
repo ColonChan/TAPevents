@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Card, CardBody, CardGroup, Col, Container, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
+import { Button, Card, CardBody, CardGroup, Col, Container, Input, InputGroup, InputGroupAddon, InputGroupText, Row, NavLink } from 'reactstrap';
 
 import logoWhite from '../../../assets/img/brand/logowhite.svg'
 
@@ -43,7 +43,7 @@ class Login extends Component {
                         <Button color="link" className="px-0 pt-0">Forgot password?</Button>
                       </Col>
                       <Col xs="12">
-                        <Button color="primary" className="px-4 btn-brand">Login</Button>
+                        <NavLink href="/#/eventlist"><Button color="primary" className="px-4 btn-brand">Login</Button></NavLink>
                       </Col>
                     </Row>
                   </CardBody>

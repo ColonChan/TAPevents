@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Modal, ModalBody, ModalFooter, ModalHeader, InputGroup, InputGroupAddon, 
   InputGroupText, FormText, Button, Card, CardHeader, CardBody, Col, 
-  // CustomInput, 
   Form, FormFeedback, FormGroup, Label, Input, Row, CardFooter 
 } from 'reactstrap';
 import { TextMask, InputAdapter } from 'react-text-mask-hoc';
@@ -64,7 +63,6 @@ class CreateEvent extends React.Component {
     };
     this.touchAll = this.touchAll.bind(this);
     this.toggle = this.toggle.bind(this);
-
   }
 
   toggle() {
@@ -173,59 +171,24 @@ class CreateEvent extends React.Component {
                       onBlur={handleBlur}
                       value={values.location} />
                   </FormGroup>
-                  <FormGroup row>
-                    <Col md="3">
-                      <Label htmlFor="fileUpload">Attachment</Label>
-                    </Col>
-                    <Col md="9">
-                      <div className="btnupload">
-                        {/* <button class="btn">Upload file</button> */}
-                        <Input type="file" id="fileUpload" name="file-upload" />
-                      </div>
-                    </Col>
-                  </FormGroup>
                   <FormGroup>
                     <Label for="newfeature">Add Feature</Label>
                     <Card className="bdrcard">
                       <CardBody className="py-2 px-3">
-                        <ol className="featurebox">
-                        <li>
-                          Frist Feature: Customize appointment scheduling among the participants 
-                          <Button color="danger" className="delcol"><i className="icon-close"></i></Button> {/* onClick to remove */}
-                        </li>
+                        <ol className="featurelist">
+                          <li>
+                            <div className="featurebox">
+                              Frist Feature: Customize appointment scheduling among the participants
+                              <Button type="button" color="danger" className="delcol"><i className="icon-close"></i></Button>
+                            </div>
+                          </li>
                         </ol>
+                        <div className="feature-addbox">
+                          <Button color="primary" onClick={this.toggle} className="addcol mr-1"><i className="icon-plus"></i> Add</Button>
+                        </div>
                       </CardBody>
                     </Card>
                   </FormGroup>
-                  <div className="featurea-ddbox">
-                    <Button color="primary" onClick={this.toggle} className="addcol mr-1"><i className="icon-plus"></i> Add</Button>
-                  </div>
-                  
-                    <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-                      <ModalHeader toggle={this.toggle}>Add Feature</ModalHeader>
-                      <ModalBody>
-                        <Row>
-                          <Col md="12">
-                            <FormGroup>
-                              <Label htmlFor="name">Feature Label</Label>
-                              <Input type="text" id="labelName" placeholder="Enter Feature label" required />
-                            </FormGroup>
-                            <FormGroup>
-                              <Label htmlFor="ccmonth">Feature List</Label>
-                              <Input type="select" name="ccmonth" id="ccmonth">
-                                <option value="1">Create notes for individual agenda items</option>
-                                <option value="2">Various options for exporting data</option>
-                                <option value="3">Customize appointment scheduling among the participants</option>
-                              </Input>
-                            </FormGroup>
-                          </Col>
-                        </Row>
-                      </ModalBody>
-                      <ModalFooter>
-                        <Button color="primary" onClick={this.toggle}>Add</Button>{' '}
-                        <Button color="secondary" onClick={this.toggle}>Cancel</Button>
-                      </ModalFooter>
-                    </Modal>
                 </Form>
               </Col>
 
@@ -264,6 +227,18 @@ class CreateEvent extends React.Component {
                     </Col>
                   </FormGroup>
                   
+                  <FormGroup row>
+                    <Col md="3">
+                      <Label htmlFor="fileUpload">Attachment</Label>
+                    </Col>
+                    <Col md="9">
+                      <div className="btnupload">
+                        {/* <button class="btn">Upload file</button> */}
+                        <Input type="file" id="fileUpload" name="file-upload" />
+                      </div>
+                    </Col>
+                  </FormGroup>
+
                   <FormGroup row>
                     <Col md="3">
                       <Label className="mt-1" for="startDate">Start Date</Label>
@@ -348,7 +323,7 @@ class CreateEvent extends React.Component {
                     </Col>
                   </FormGroup>
                 </div>
-                <div className="subformarea mt-2">
+                {/* <div className="subformarea mt-2">
                   <FormGroup row className="mb-0">
                     <Col md="3">
                       <Label>Status</Label>
@@ -364,11 +339,11 @@ class CreateEvent extends React.Component {
                       </FormGroup>
                     </Col>
                   </FormGroup>
-                </div>
+                </div> */}
               </Col>
             </Row>
-
           </CardBody>
+
           <CardFooter>
             <FormGroup>
               <Button type="submit" color="primary" className="mr-1 btnsubmit" disabled={isSubmitting || !isValid}>{isSubmitting ? 'Wait...' : 'Create'}</Button>
@@ -378,6 +353,30 @@ class CreateEvent extends React.Component {
           </span>
           )} />
         </Card>
+
+        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+          <ModalHeader toggle={this.toggle}>Add Feature</ModalHeader>
+          <ModalBody>
+            <Row>
+              <Col md="12">
+                <FormGroup>
+                  <Label htmlFor="ccmonth">Feature List</Label>
+                  <Input type="select" name="ccmonth" id="ccmonth">
+                    <option value="1">[Risk Management Series – Professional Liability] Professional Liability Part II – Cyber Liability</option>
+                    <option value="2">Add Biography Feature</option>
+                    <option value="3">Add Agenda Feature</option>
+                    <option value="4">Add Feedback</option>
+                    <option value="5">Add Theme</option>
+                  </Input>
+                </FormGroup>
+              </Col>
+            </Row>
+          </ModalBody>
+          <ModalFooter>
+            <Button color="primary" onClick={this.toggle}>Add</Button>{' '}
+            <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+          </ModalFooter>
+        </Modal>
       </div>
     )
   }
