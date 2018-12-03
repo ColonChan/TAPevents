@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Button, Card, CardBody, CardGroup, Col, Container, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
 
 import logoWhite from '../../../assets/img/brand/logowhite.svg'
-import mainbk from '../../../assets/img/mainbk.jpg'
 
 class Login extends Component {
   render() {

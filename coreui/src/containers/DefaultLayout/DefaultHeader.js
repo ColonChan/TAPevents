@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
-import { DropdownMenu, DropdownToggle, Nav, NavItem, NavLink } from 'reactstrap';
-import PropTypes from 'prop-types';
-
 import { 
-  // AppAsideToggler, 
-  AppHeaderDropdown, 
+  // DropdownMenu, DropdownToggle, 
+  Nav, NavItem, NavLink 
+} from 'reactstrap';
+import PropTypes from 'prop-types';
+import { 
+  // AppAsideToggler, AppHeaderDropdown, 
   AppNavbarBrand, 
   AppSidebarToggler 
 } from '@coreui/react';
 
 import logo from '../../assets/img/brand/applogo.svg'
-import sygnet from '../../assets/img/brand/sygnet.svg'
-import avatar from '../../assets/img/avatars/6.jpg'
+import logomin from '../../assets/img/brand/logomin.svg'
+// import avatar from '../../assets/img/avatars/6.jpg'
 
 const propTypes = {
   children: PropTypes.node,
@@ -30,21 +31,27 @@ class DefaultHeader extends Component {
         <AppSidebarToggler className="d-lg-none" display="md" mobile />
         <AppNavbarBrand
           full={{ src: logo, width: 113, height: 36, alt: 'App Logo' }}
-          minimized={{ src: sygnet, width: 32, height: 32, alt: 'App Logo' }}
+          minimized={{ src: logomin, width: 32, height: 32, alt: 'App Logo' }}
         />
         {/* <AppSidebarToggler className="d-md-down-none" display="lg" /> */}
         <Nav className="ml-auto" navbar>
-          <NavItem className="bordertest">
-            <NavLink href="#"><i className="icon-location-pin"></i></NavLink>
+          <NavItem className="border-item">
+            <NavLink href="#"><i className="cui-user"></i></NavLink>
           </NavItem>
-          <AppHeaderDropdown>
+          <NavItem className="border-item">
+            <NavLink href="#"><i className="cui-settings"></i></NavLink>
+          </NavItem>
+          <NavItem className="border-item">
+            <NavLink href="#"><i className="cui-account-logout"></i></NavLink>
+          </NavItem>
+          {/* <AppHeaderDropdown>
             <DropdownToggle nav>
               <img src={avatar} className="img-avatar" alt="admin@bootstrapmaster.com" />
             </DropdownToggle>
             <DropdownMenu right style={{ right: 'auto', height: '400px' }}>
               AppHeaderDropdown
             </DropdownMenu>
-          </AppHeaderDropdown>
+          </AppHeaderDropdown> */}
         </Nav>
         {/* <AppAsideToggler className="d-md-down-none" /> */}
         {/*<AppAsideToggler className="d-lg-none" mobile />*/}

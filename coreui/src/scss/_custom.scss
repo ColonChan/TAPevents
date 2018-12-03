@@ -25,10 +25,24 @@ body { color: $brand-text-color; background-color: #edeeef; }
 .btn-link { color: #1565C0; }
 
 /* for Extend */
-.hdshadow { box-shadow: 0 1px 4px -1px rgba(#000, 0.15); }
+.hdshadow { box-shadow: 0 1px 6px -1px rgba(#000, 0.1); }
 
 /* Default Header Classes */
-.app-header { @extend .hdshadow; }
+.app-header { @extend .hdshadow; 
+  .nav-item.border-item {
+    .nav-link {
+      font-size: 1rem;
+      width: 32px;
+      height: 32px;
+      // color: $brand-gray-text;
+      border: 2px solid #ccc;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
 
 /* Login Page Classes */
 .frontbk {
